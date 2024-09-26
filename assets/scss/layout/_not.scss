@@ -1,0 +1,51 @@
+@use "../config/variables" as v;
+/** 404 **/
+
+.not-sections {
+    width: 100%;
+    &_inner {
+        width: 720px;
+        margin: 0 auto;
+        padding: 140px 0 200px;
+        @media screen and (max-width: v.$sp) {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 100px 36px 140px;
+        }
+        h2 {
+            margin-bottom: 80px;
+            font-size: 36px;
+            font-weight: bold;
+            color: v.$black;
+            @media screen and (max-width: v.$sp) {
+                margin-bottom: 10px;
+                font-size: 22px;
+            }
+        }
+        p {
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-weight: medium;
+            color: v.$black;
+            @media screen and (max-width: v.$sp) {
+                margin-bottom: 30px;
+                font-size: 12px;
+            }
+        }
+        a {
+            font-size: 16px;
+            font-weight: medium;
+            color: v.$green;
+            @media screen and (max-width: v.$sp) {
+                font-size: 12px;
+            }
+            &:hover {
+                opacity: .8;
+                transition: .3s;
+            }
+            &:visited {
+                color: v.$green;
+            }
+        }
+    }
+}

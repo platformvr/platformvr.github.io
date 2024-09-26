@@ -1,0 +1,238 @@
+@use "config/variables" as v;
+
+.btn {
+    display: block;
+    width: 318px;
+    height: 64px;
+    font-size: 18px;
+    font-weight: medium;
+    color: v.$white;
+    text-align: center;
+    line-height: 64px;
+    box-shadow: 0 5px 5px #00000033;
+    &-green {
+        background-color: v.$green;
+        border-radius: 32px;
+        &:hover {
+            background-color: v.$green-light;
+            color: v.$green;
+            transition : .3s;
+        }
+    }
+    &-big {
+        width: 352px;
+        height: 80px;
+        border-radius: 40px;
+        font-size: 24px;
+        line-height: 80px;
+        @media screen and (max-width: v.$sp) {
+            max-width: 318px;
+            height: 64px;
+            border-radius: 32px;
+            font-size: 18px;
+            line-height: 64px;
+        }
+    }
+    &-line {
+        border: solid 2px v.$white;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    &-small {
+        width: 260px;
+        height: 58px;
+        border-radius: 29px;
+        font-size: 22px;
+        line-height: 58px;
+        @media screen and (max-width: v.$sp) {
+            width: 100%;
+            max-width: 318px;
+            height: 52px;
+            margin: 0 auto;
+            border-radius: 26px;
+            font-size: 18px;
+            line-height: 52px;
+        }
+    }
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    height: 110px;
+    background-color: v.$green;
+    z-index: 100;
+    @media screen and (max-width: v.$sp)  {
+        height: 60px;
+    }
+    &-inner {
+        display: flex;
+        width: calc(100% - 280px);
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        @media screen and (max-width: v.$sp) {
+            width: 100%;
+            padding: 0 10px 0 20px;
+        }
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            color: v.$white;
+            @media screen and (max-width: v.$sp) {
+                font-size: 28px;
+            }
+        }
+        nav {
+            @media screen and (max-width: v.$sp) {
+                position: relative;
+            }
+            #menu-toggle {
+                display: none;
+            }
+            .menu-button-container {
+                display: none;
+                @media screen and (max-width: v.$sp) {
+                    position: relative;
+                    display: block;
+                    width: 36px;
+                    z-index: 200;
+                    
+                    .sp-menu,
+                    .sp-menu::before,
+                    .sp-menu::after {
+                        display: block;
+                        background-color: v.$white;
+                        position: absolute;
+                        height: 3px;
+                        width: 36px;
+                        transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+                        border-radius: 2px;
+                    }
+                    .sp-menu::before {
+                        content: '';
+                        margin-top: -10px;
+                    }
+                    .sp-menu::after {
+                        content: '';
+                        margin-top: 10px;
+                    }
+                }
+            }
+            .menulist {
+                display: flex;
+                @media screen and (max-width: v.$sp) {
+                    position: fixed;
+                    top: 0;
+                    right: -100vw;
+                    transition: .5s;
+                    width: 220px;
+                    height: 100vh;
+                    margin: 0;
+                    padding-top: 117px;
+                    display: block;
+                    background-color: v.$green-dark;
+                    z-index: 150;
+                }
+                li {
+                    margin-left: 22px;
+                    @media screen and (max-width: v.$sp) {
+                        margin: 0 0 30px 30px;
+                    }
+                    a {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: v.$white;
+                    }
+                }
+            }
+            #menu-toggle:checked + .menu-button-container .sp-menu::before {
+                margin-top: 0px;
+                transform: rotate(45deg);
+            }
+            
+            #menu-toggle:checked + .menu-button-container .sp-menu {
+                background: rgba(255, 255, 255, 0);
+            }
+            
+            #menu-toggle:checked + .menu-button-container .sp-menu::after {
+                margin-top: 0px;
+                transform: rotate(-45deg);
+            }
+            
+            #menu-toggle:checked ~ .menulist {
+                @media screen and (max-width: v.$sp) {
+                    right: 0;
+                }
+                
+            }
+        }
+    }
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 260px;
+    background: url(../img/page-header.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    border-top: solid 1px #707070;
+    @media screen and (max-width: v.$sp) {
+        height: 160px;
+    }
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        color: v.$white;
+        text-align: center;
+        @media screen and (max-width: v.$sp) {
+            font-size: 24px;
+        }
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: v.$green-dark;
+    &-inner {
+        max-width: 1088px;
+        margin: 0 auto;
+        padding: 86px 0 34px;
+        @media screen and (max-width: v.$sp) {
+            padding: 50px 36px 57px;
+        }
+        .copy {
+            font-size: 22px;
+            text-align: center;
+            color: v.$white;
+            @media screen and (max-width: v.$sp) {
+                font-size: 18px;
+            }
+        }
+    }
+    &-nav {
+        display: flex;
+        width: 100%;
+        margin-bottom: 71px;
+        justify-content: space-between;
+        @media screen and (max-width: v.$sp) {
+            display: block;
+            margin-bottom: 14px;
+            li {
+                margin-bottom: 30px;
+            }
+        }
+        .btn {
+            width: 260px;
+            @media screen and (max-width: v.$sp) {
+                width: 100%;
+                max-width: 318px;
+            }
+        }
+    }
+}

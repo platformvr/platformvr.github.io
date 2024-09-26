@@ -1,0 +1,43 @@
+@use "../config/variables" as v;
+
+/** お知らせ **/
+
+.news-sections {
+    &_inner {
+        width: 720px;
+        margin: 0 auto;
+        padding: 140px 0 200px;
+        @media screen and (max-width: v.$sp) {
+            width: 100%;
+            padding: 100px 36px 140px;
+            box-sizing: border-box;
+        }
+        h2 {
+            margin-bottom: 80px;
+            font-size: 36px;
+            font-weight: bold;
+            color: v.$black;
+            @media screen and (max-width: v.$sp) {
+                margin-bottom: 50px;
+                font-size: 22px;
+            }
+            .sp {
+                display: none;
+                @media screen and (max-width: v.$sp) {
+                    display: block;
+                }
+            }
+        }
+        p {
+            font-size: 16px;
+            font-weight: medium;
+            color: v.$black;
+            @media screen and (max-width: v.$sp) {
+                font-size: 12px;
+            }
+            a {
+                color: v.$green;
+            }
+        }
+    }
+}

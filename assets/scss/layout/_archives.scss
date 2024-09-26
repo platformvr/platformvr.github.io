@@ -1,0 +1,77 @@
+@use "../config/variables" as v;
+
+/** 活動実績 **/
+
+.archives-sections {
+    &_inner {
+        max-width: 1088px;
+        margin: 0 auto;
+        padding: 140px 0;
+        @media screen and (max-width: v.$sp) {
+            padding: 100px 36px 140px;
+            box-sizing: border-box;
+        }
+        h2 {
+            margin-bottom: 80px;
+            font-size: 48px;
+            font-weight: bold;
+            color: v.$black;
+            line-height: 70px;
+            @media screen and (max-width: v.$sp) {
+                margin-bottom: 60px;
+                font-size: 28px;
+                line-height: 40px;
+                text-align: center;
+            }
+        }
+        .archives-list {
+            margin-bottom: 80px;
+            @media screen and (max-width: v.$sp) {
+                margin-bottom: 90px;
+            }
+            & > li {
+                display: flex;
+                margin-bottom: 60px;
+                @media screen and (max-width: v.$sp) {
+                    display: block;
+                    margin-bottom: 50px;
+                }
+                .archives-img {
+                    width: 536px;
+                    @media screen and (max-width: v.$sp) {
+                        width: 100%;
+                        margin-bottom: 25px;
+                    }
+                }
+                .archives-description {
+                    padding: 14.5px 0 0 104px;
+                    @media screen and (max-width: v.$sp) {
+                        padding: 0;
+                    }
+                    h3 {
+                        margin-bottom: 20px;
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: v.$black;
+                        @media screen and (max-width: v.$sp) {
+                            margin-bottom: 16px;
+                            font-size: 22px;
+                        }
+                    }
+                    p {
+                        width: 448px;
+                        font-size: 16px;
+                        font-weight: medium;
+                        color: v.$black;
+                        line-height: 30px;
+                        @media screen and (max-width: v.$sp) {
+                            width: inherit;
+                            font-size: 12px;
+                            line-height: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

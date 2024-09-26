@@ -1,0 +1,90 @@
+@use "../config/variables" as v;
+
+/** 各号紹介 **/
+
+.theme-sections {
+    &_inner {
+        max-width: 1088px;
+        margin: 0 auto;
+        padding: 140px 0;
+        @media screen and (max-width: v.$sp) {
+            width: 100%;
+            padding: 100px 36px 140px;
+            box-sizing: border-box;
+        }
+        h2 {
+            margin-bottom: 80px;
+            font-size: 48px;
+            font-weight: bold;
+            color: v.$black;
+            @media screen and (max-width: v.$sp) {
+                margin-bottom: 60px;
+                font-size: 28px;
+                text-align: center;
+            }
+        }
+        .theme-list {
+            margin-bottom: 20px;
+            @media screen and (max-width: v.$sp) {
+                width: 100%;
+                margin-bottom: 80px;
+            }
+            & > li {
+                display: flex;
+                margin-bottom: 60px;
+                @media screen and (max-width: v.$sp) {
+                    display: block;
+                    width: 100%;
+                    margin-bottom: 50px;
+                }
+                .themes-img {
+                    width: 536px;
+                    @media screen and (max-width: v.$sp) {
+                        width: 100%;
+                        margin-bottom: 25px;
+                    }
+                }
+                .themes-description {
+                    padding: 14.5px 0 0 104px;
+                    @media screen and (max-width: v.$sp) {
+                        padding: 0;
+                    }
+                    h3 {
+                        margin-bottom: 20px;
+                        font-size: 28px;
+                        font-weight: bold;
+                        color: v.$black;
+                        @media screen and (max-width: v.$sp) {
+                            margin-bottom: 16px;
+                            font-size: 22px;
+                        }
+                        .sp {
+                            display: none;
+                            @media screen and (max-width: v.$sp) {
+                                display: block;
+                            }
+                        }
+                    }
+                    .worlds {
+                        margin-bottom: 40px;
+                        @media screen and (max-width: v.$sp) {
+                            margin-bottom: 30px;
+                        }
+                        li {
+                            p {
+                                font-size: 16px;
+                                font-weight: medium;
+                                color: v.$black;
+                                line-height: 30px;
+                                @media screen and (max-width: v.$sp) {
+                                    font-size: 12px;
+                                    line-height: 20px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
