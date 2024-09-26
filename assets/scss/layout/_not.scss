@@ -1,0 +1,35 @@
+@use "../config/variables" as v;
+/** 404 **/
+
+.not-sections {
+    width: 100%;
+    &_inner {
+        width: 720px;
+        margin: 0 auto;
+        padding: 140px 0 200px;
+        h2 {
+            margin-bottom: 80px;
+            font-size: 36px;
+            font-weight: bold;
+            color: v.$black;
+        }
+        p {
+            margin-bottom: 40px;
+            font-size: 16px;
+            font-weight: medium;
+            color: v.$black;
+        }
+        a {
+            font-size: 16px;
+            font-weight: medium;
+            color: v.$green;
+            &:hover {
+                opacity: .8;
+                transition: .3s;
+            }
+            &:visited {
+                color: v.$green;
+            }
+        }
+    }
+}

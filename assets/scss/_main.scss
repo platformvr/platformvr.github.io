@@ -1,0 +1,120 @@
+@use "config/variables" as v;
+
+.btn {
+    display: block;
+    width: 318px;
+    height: 64px;
+    font-size: 18px;
+    font-weight: medium;
+    color: v.$white;
+    text-align: center;
+    line-height: 64px;
+    box-shadow: 0 5px 5px #00000033;
+    &-green {
+        background-color: v.$green;
+        border-radius: 32px;
+        &:hover {
+            background-color: v.$green-light;
+            color: v.$green;
+            transition : .3s;
+        }
+    }
+    &-big {
+        width: 352px;
+        height: 80px;
+        border-radius: 40px;
+        font-size: 24px;
+        line-height: 80px;
+    }
+    &-line {
+        border: solid 2px v.$white;
+        border-radius: 0;
+        box-shadow: none;
+    }
+    &-small {
+        width: 260px;
+        height: 58px;
+        border-radius: 29px;
+        font-size: 22px;
+        line-height: 58px;
+    }
+}
+
+.header {
+    position: sticky;
+    width: 100%;
+    height: 110px;
+    background-color: v.$green;
+    @media screen and (max-width: 480px) {
+        
+    }
+    &-inner {
+        display: flex;
+        width: calc(100% - 280px);
+        height: 100%;
+        margin: 0 auto;
+        justify-content: space-between;
+        align-items: center;
+        .logo {
+            font-size: 32px;
+            font-weight: bold;
+            columns: v.$white;
+        }
+        nav {
+            ul {
+                display: flex;
+                li {
+                    margin-left: 22px;
+                    a {
+                        font-size: 18px;
+                        font-weight: 500;
+                        color: v.$white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 260px;
+    background: url(../img/page-header.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+    border: solid 1px #707070;
+    h1 {
+        font-size: 48px;
+        font-weight: bold;
+        color: v.$white;
+        text-align: center;
+    }
+}
+
+.footer {
+    width: 100%;
+    background-color: v.$green-dark;
+    &-inner {
+        max-width: 1088px;
+        margin: 0 auto;
+        padding: 86px 0 34px;
+        .copy {
+            font-size: 22px;
+            text-align: center;
+            color: v.$white;
+        }
+    }
+    &-nav {
+        display: flex;
+        width: 100%;
+        margin-bottom: 71px;
+        justify-content: space-between;
+        .btn {
+            width: 260px;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+@use "../config/variables" as v;
+
+/** お知らせ **/
+
+.news-sections {
+    &_inner {
+        width: 720px;
+        margin: 0 auto;
+        padding: 140px 0 200px;
+        h2 {
+            margin-bottom: 80px;
+            font-size: 36px;
+            font-weight: bold;
+            color: v.$black;
+        }
+        p {
+            font-size: 16px;
+            font-weight: medium;
+            color: v.$black;
+        }
+    }
+}
