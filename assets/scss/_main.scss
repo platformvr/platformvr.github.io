@@ -181,7 +181,7 @@
     background-size: cover;
     background-position: center;
     box-sizing: border-box;
-    border: solid 1px #707070;
+    border-top: solid 1px #707070;
     @media screen and (max-width: v.$sp) {
         height: 160px;
     }
