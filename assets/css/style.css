@@ -70,6 +70,17 @@ a:visited {
   font-size: 22px;
   line-height: 58px;
 }
+@media screen and (max-width: 480px) {
+  .btn-small {
+    width: 100%;
+    max-width: 318px;
+    height: 52px;
+    margin: 0 auto;
+    border-radius: 26px;
+    font-size: 18px;
+    line-height: 52px;
+  }
+}
 
 .header {
   position: sticky;
@@ -564,24 +575,62 @@ a:visited {
   margin: 0 auto;
   padding: 140px 0;
 }
+@media screen and (max-width: 480px) {
+  .theme-sections_inner {
+    width: 100%;
+    padding: 100px 36px 140px;
+    box-sizing: border-box;
+  }
+}
 .theme-sections_inner h2 {
   margin-bottom: 80px;
   font-size: 48px;
   font-weight: bold;
   color: #555;
 }
+@media screen and (max-width: 480px) {
+  .theme-sections_inner h2 {
+    margin-bottom: 60px;
+    font-size: 28px;
+    text-align: center;
+  }
+}
 .theme-sections_inner .theme-list {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list {
+    width: 100%;
+    margin-bottom: 80px;
+  }
 }
 .theme-sections_inner .theme-list > li {
   display: flex;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list > li {
+    display: block;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+}
 .theme-sections_inner .theme-list > li .themes-img {
   width: 536px;
 }
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list > li .themes-img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
 .theme-sections_inner .theme-list > li .themes-description {
   padding: 14.5px 0 0 104px;
+}
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list > li .themes-description {
+    padding: 0;
+  }
 }
 .theme-sections_inner .theme-list > li .themes-description h3 {
   margin-bottom: 20px;
@@ -589,14 +638,39 @@ a:visited {
   font-weight: bold;
   color: #555;
 }
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list > li .themes-description h3 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+}
+.theme-sections_inner .theme-list > li .themes-description h3 .sp {
+  display: none;
+}
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list > li .themes-description h3 .sp {
+    display: block;
+  }
+}
 .theme-sections_inner .theme-list > li .themes-description .worlds {
   margin-bottom: 40px;
+}
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list > li .themes-description .worlds {
+    margin-bottom: 30px;
+  }
 }
 .theme-sections_inner .theme-list > li .themes-description .worlds li p {
   font-size: 16px;
   font-weight: medium;
   color: #555;
   line-height: 30px;
+}
+@media screen and (max-width: 480px) {
+  .theme-sections_inner .theme-list > li .themes-description .worlds li p {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 
 /** メンバー **/
