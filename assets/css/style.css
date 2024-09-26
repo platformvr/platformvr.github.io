@@ -657,6 +657,12 @@ a:visited {
   margin: 0 auto;
   padding: 140px 0;
 }
+@media screen and (max-width: 480px) {
+  .archives-sections_inner {
+    padding: 100px 36px 140px;
+    box-sizing: border-box;
+  }
+}
 .archives-sections_inner h2 {
   margin-bottom: 80px;
   font-size: 48px;
@@ -664,18 +670,48 @@ a:visited {
   color: #555;
   line-height: 70px;
 }
+@media screen and (max-width: 480px) {
+  .archives-sections_inner h2 {
+    margin-bottom: 60px;
+    font-size: 28px;
+    line-height: 40px;
+    text-align: center;
+  }
+}
 .archives-sections_inner .archives-list {
   margin-bottom: 80px;
+}
+@media screen and (max-width: 480px) {
+  .archives-sections_inner .archives-list {
+    margin-bottom: 90px;
+  }
 }
 .archives-sections_inner .archives-list > li {
   display: flex;
   margin-bottom: 60px;
 }
+@media screen and (max-width: 480px) {
+  .archives-sections_inner .archives-list > li {
+    display: block;
+    margin-bottom: 50px;
+  }
+}
 .archives-sections_inner .archives-list > li .archives-img {
   width: 536px;
 }
+@media screen and (max-width: 480px) {
+  .archives-sections_inner .archives-list > li .archives-img {
+    width: 100%;
+    margin-bottom: 25px;
+  }
+}
 .archives-sections_inner .archives-list > li .archives-description {
   padding: 14.5px 0 0 104px;
+}
+@media screen and (max-width: 480px) {
+  .archives-sections_inner .archives-list > li .archives-description {
+    padding: 0;
+  }
 }
 .archives-sections_inner .archives-list > li .archives-description h3 {
   margin-bottom: 20px;
@@ -683,12 +719,25 @@ a:visited {
   font-weight: bold;
   color: #555;
 }
+@media screen and (max-width: 480px) {
+  .archives-sections_inner .archives-list > li .archives-description h3 {
+    margin-bottom: 16px;
+    font-size: 22px;
+  }
+}
 .archives-sections_inner .archives-list > li .archives-description p {
   width: 448px;
   font-size: 16px;
   font-weight: medium;
   color: #555;
   line-height: 30px;
+}
+@media screen and (max-width: 480px) {
+  .archives-sections_inner .archives-list > li .archives-description p {
+    width: inherit;
+    font-size: 12px;
+    line-height: 17px;
+  }
 }
 
 /** お知らせ **/
